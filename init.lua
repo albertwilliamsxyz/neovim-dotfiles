@@ -107,11 +107,11 @@ vim.keymap.set('n', '<leader>th', ':tabe %<CR>')
 
 -- Telescope
 
-vim.keymap.set('n', '<leader><leader>', ':Telescope<CR>')
-vim.keymap.set('n', '<leader><leader>f', ':Telescope find_files<CR>')
-vim.keymap.set('n', '<leader><leader>g', ':Telescope live_grep<CR>')
-vim.keymap.set('n', '<leader><leader>h', ':Telescope current_buffer_fuzzy_find<CR>')
-vim.keymap.set('n', '<leader><leader>k', ':Telescope keymaps<CR>')
+vim.keymap.set('n', '<leader>fa', ':Telescope<CR>')
+vim.keymap.set('n', '<leader>ff', ':Telescope find_files<CR>')
+vim.keymap.set('n', '<leader>fg', ':Telescope live_grep<CR>')
+vim.keymap.set('n', '<leader>fh', ':Telescope current_buffer_fuzzy_find<CR>')
+vim.keymap.set('n', '<leader>fk', ':Telescope keymaps<CR>')
 
 -- Leap
 
