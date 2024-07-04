@@ -101,9 +101,9 @@ vim.keymap.set('n', '<leader>hh', ':nohl<CR>', { silent = true })
 
 --	Tabs
 
-vim.keymap.set('n', '<leader>te', ':Texplore<CR>')
-vim.keymap.set('n', '<leader>to', ':tabo<CR>')
-vim.keymap.set('n', '<leader>th', ':tabe %<CR>')
+vim.keymap.set('n', '<leader>tae', ':Texplore<CR>')
+vim.keymap.set('n', '<leader>tao', ':tabo<CR>')
+vim.keymap.set('n', '<leader>tah', ':tabe %<CR>')
 
 -- Telescope
 
@@ -194,18 +194,18 @@ require('nvim-treesitter.configs').setup({
 				[']c'] = '@class.outer',
 			},
 			goto_next_end = {
-				[']s'] = '@statement.outer',
-				[']r'] = '@return.outer',
-				[']p'] = '@parameter.outer',
-				[']b'] = '@block.outer',
+				[']S'] = '@statement.outer',
+				[']R'] = '@return.outer',
+				[']P'] = '@parameter.outer',
+				[']B'] = '@block.outer',
 				[']F'] = '@function.outer',
 				[']C'] = '@class.outer',
 			},
 			goto_previous_start = {
-				['[S'] = '@statement.outer',
-				['[R'] = '@return.outer',
-				['[P'] = '@parameter.outer',
-				['[B'] = '@block.outer',
+				['[s'] = '@statement.outer',
+				['[r'] = '@return.outer',
+				['[p'] = '@parameter.outer',
+				['[b'] = '@block.outer',
 				['[f'] = '@function.outer',
 				['[c'] = '@class.outer',
 			},
