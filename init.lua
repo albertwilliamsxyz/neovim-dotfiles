@@ -233,41 +233,42 @@ local luasnip = require('luasnip')
 local snippet = luasnip.snippet
 local text_node = luasnip.text_node
 local insert_node = luasnip.insert_node
+local snippet_node = luasnip.snippet_node
 
 luasnip.add_snippets('lua', {
 	snippet('map', {
 		text_node('vim.keymap.set('),
-		insert_node(1),
+		insert_node(1, 'mode'),
 		text_node(", '<leader>"),
-		insert_node(2),
+		insert_node(2, 'key'),
 		text_node("', '"),
-		insert_node(3),
+		insert_node(3, 'value'),
 		text_node("')"),
 	}),
 	snippet('opt', {
 		text_node('vim.opt.'),
-		insert_node(1),
+		insert_node(1, 'option'),
 		text_node(' = '),
-		insert_node(2)
+		insert_node(2, 'value')
 	}),
 	snippet('snp', {
 		text_node("snippet('"),
-		insert_node(1),
+		insert_node(1, 'snippet'),
 		text_node({ "', {", '\t' }),
-		insert_node(2),
+		insert_node(2, 'placeholder'),
 		text_node({ '', '}),' })
 	}),
 	snippet('lvr', {
 		text_node('local '),
-		insert_node(1),
+		insert_node(1, 'name'),
 		text_node(' = '),
-		insert_node(2)
+		insert_node(2, 'value')
 	}),
 	snippet('lfn', {
 		text_node('local function '),
-		insert_node(1),
+		insert_node(1, 'name'),
 		text_node({ '()', '\t' }),
-		insert_node(2),
+		insert_node(2, 'placeholder'),
 		text_node({ '', 'end' }),
 	}),
 })
@@ -275,35 +276,69 @@ luasnip.add_snippets('lua', {
 luasnip.add_snippets('typescript', {
 	snippet('desc', {
 		text_node("describe('"),
-		insert_node(1),
+		insert_node(1, 'placeholder'),
 		text_node({ "', () => {", '\t' }),
-		insert_node(2),
+		insert_node(2, 'placeholder'),
 		text_node({ '', '})' }),
 	}),
 	snippet('test', {
 		text_node("test('"),
-		insert_node(1),
+		insert_node(1, 'placeholder'),
 		text_node({ "', () => {", '\t' }),
-		insert_node(2),
+		insert_node(2, 'placeholder'),
 		text_node({ '', '})' }),
 	}),
 	snippet('testtd', {
 		text_node("test.todo('"),
-		insert_node(1),
+		insert_node(1, 'placeholder'),
 		text_node("')"),
 	}),
 	snippet('etb', {
 		text_node('expect('),
-		insert_node(1),
+		insert_node(1, 'placeholder'),
 		text_node(').toBe('),
-		insert_node(2),
+		insert_node(2, 'placeholder'),
 		text_node(')'),
 	}),
 	snippet('cls', {
 		text_node('class '),
-		insert_node(1),
+		insert_node(1, 'name'),
 		text_node({ ' {', '\t' }),
-		insert_node(2),
+		insert_node(2, 'placeholder'),
 		text_node({ '', '}' })
 	}),
+})
+
+luasnip.add_snippets('python', {
+	snippet('functestdec', {
+		text_node('@pytest.mark.functional(permissions=['),
+		insert_node(1, 'permissions'),
+		text_node('])')
+	}),
+	snippet('functest', {
+		text_node('@pytest.mark.functional(permissions=['),
+		insert_node(1, 'permissions'),
+		text_node({ '])', 'def test_' }),
+		insert_node(2, 'name'),
+		text_node('('),
+		insert_node(3, 'parameters'),
+		text_node({ '):', '\t' }),
+		insert_node(4, 'pass')
+	}),
+	snippet('test', {
+		text_node('def test_'),
+		insert_node(1, 'name'),
+		text_node('('),
+		insert_node(2, 'parameters'),
+		text_node({ '):', '\t' }),
+		insert_node(3, 'pass')
+	}),
+	snippet('def', {
+		text_node('def '),
+		insert_node(1, 'name'),
+		text_node('('),
+		insert_node(2, 'parameters'),
+		text_node({ '):', '\t' }),
+		insert_node(3, 'placeholder')
+	})
 })
