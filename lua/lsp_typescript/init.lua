@@ -12,7 +12,6 @@ vim.opt.shiftwidth = 2
 
 local buffer = vim.api.nvim_get_current_buf()
 
-
 vim.lsp.start({
 	name = 'typescript-language-server',
 	cmd = { 'typescript-language-server', '--stdio' },
