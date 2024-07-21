@@ -57,6 +57,9 @@ vim.opt.relativenumber = true
 
 vim.opt.showtabline = 2
 
+vim.opt.expandtab = true
+
+
 -- Appearance
 
 vim.opt.termguicolors = true
