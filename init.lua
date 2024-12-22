@@ -7,7 +7,7 @@ vim.opt.relativenumber = true
 vim.opt.showtabline = 2
 vim.opt.expandtab = true
 
-vim.opt.completeopt = { 'menu', 'menuone', 'preview', 'noselect' }
+vim.opt.completeopt = { "menu", "menuone", "preview", "noselect" }
 
 -- Appearance
 
@@ -24,8 +24,8 @@ vim.opt.ttimeoutlen = 0
 -- Functions
 
 local function reload_configuration()
-        vim.cmd(vim.fn.expand("source $MYVIMRC"))
-        print(vim.fn.expand("$MYVIMRC sourced successfully"))
+	vim.cmd(vim.fn.expand("source $MYVIMRC"))
+	print(vim.fn.expand("$MYVIMRC sourced successfully"))
 end
 
 -- Mappings
