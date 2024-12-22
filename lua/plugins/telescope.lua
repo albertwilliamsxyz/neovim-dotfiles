@@ -1,14 +1,17 @@
 return {
 	"nvim-telescope/telescope.nvim",
+	lazy = false,
 	tag = "0.1.8",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
+			lazy = false,
 			build = "make",
 		},
 		{
 			"nvim-telescope/telescope-ui-select.nvim",
+			lazy = false,
 			config = function()
 				local telescope = require("telescope")
 				telescope.setup({
@@ -34,6 +37,7 @@ return {
 		telescope.setup({
 			defaults = {
 				file_ignore_patterns = { "node_modules", ".git", ".env" },
+				winblend = 100,
 			},
 			extensions = {
 				fzf = {
