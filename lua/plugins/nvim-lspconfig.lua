@@ -22,6 +22,21 @@ return {
                         },
                 })
 
+                lspconfig.emmet_language_server.setup({
+                        filetypes = { "html", "css", "javascript", "javascriptreact", "typescriptreact", "less", "sass", "scss", "pug" },
+                        init_options = {
+                                includeLanguages = {},
+                                excludeLanguages = {},
+                                extensionsPath = {},
+                                preferences = {},
+                                showAbbreviationSuggestions = true,
+                                showExpandedAbbreviation = "always",
+                                showSuggestionsAsSnippets = true,
+                                syntaxProfiles = {},
+                                variables = {},
+                        },
+                })
+
                 vim.api.nvim_create_autocmd("LspAttach", {
                         callback = function(event)
                                 local buffer = event.buf
