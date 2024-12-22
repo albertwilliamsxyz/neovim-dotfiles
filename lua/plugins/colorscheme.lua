@@ -1,8 +1,8 @@
 return {
-        'RRethy/base16-nvim',
+        "RRethy/base16-nvim",
         lazy = false,
         priority = 1000,
         config = function()
-                vim.cmd.colorscheme('base16-grayscale-light')
-        end
+                vim.cmd.colorscheme("base16-grayscale-light")
+        end,
 }

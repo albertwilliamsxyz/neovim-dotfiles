@@ -7,6 +7,8 @@ vim.opt.relativenumber = true
 vim.opt.showtabline = 2
 vim.opt.expandtab = true
 
+vim.opt.completeopt = { 'menu', 'menuone', 'preview', 'noselect' }
+
 -- Appearance
 
 vim.opt.termguicolors = true
