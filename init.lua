@@ -11,6 +11,8 @@ vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
+vim.opt.cursorline = true
+
 vim.opt.completeopt = { "menu", "menuone", "preview", "noselect" }
 
 -- Appearance
@@ -28,8 +30,8 @@ vim.opt.ttimeoutlen = 0
 -- Functions
 
 local function reload_configuration()
-	vim.cmd(vim.fn.expand("source $MYVIMRC"))
-	print(vim.fn.expand("$MYVIMRC sourced successfully"))
+        vim.cmd(vim.fn.expand("source $MYVIMRC"))
+        print(vim.fn.expand("$MYVIMRC sourced successfully"))
 end
 
 -- Mappings
