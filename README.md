@@ -6,7 +6,7 @@
 - Check https://github.com/jmbuhr/otter.nvim
 - Improve autocompletion to only setup the commands if the items actually support them (validate support for lsp methods on nvim-lspconfig)
 - Fix jump back in snippets completion options
-
+- Use keys instead of config to set keymaps for fugitive
 - Evaluate improvements over the autocompletion
 - Check how to optimize the configuration, for some reason in my M2 machine it is running slow, but in my i9 works fine
     - This might be related to the level of logs I have set, since they are set to trace all events are being taken into account
