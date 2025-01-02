@@ -37,7 +37,6 @@ return {
                 telescope.setup({
                         defaults = {
                                 file_ignore_patterns = { "node_modules", ".git", ".env" },
-                                winblend = 10,
                         },
                         extensions = {
                                 fzf = {

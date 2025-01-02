@@ -5,6 +5,10 @@ return {
                 ensure_installed = {
                         "lua_ls",
                         "stylua",
+                        "ts_ls",
+                        "pyright",
+                        "jsonls",
+                        "eslint_d",
                         "emmet-language-server",
                         "misspell",
                         "codespell",
