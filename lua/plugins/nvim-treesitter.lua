@@ -3,13 +3,12 @@ return {
 	build = ":TSUpdate",
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter-textobjects",
+		"nvim-treesitter/nvim-treesitter-context",
 	},
 	config = function()
 		require("nvim-treesitter.install").prefer_git = true
 
-		---@diagnostic disable-next-line: missing-fields
 		require("nvim-treesitter.configs").setup({
-			auto_install = true,
 			sync_install = true,
 			auto_install = true,
 			indent = { enable = true },
