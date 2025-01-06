@@ -4,6 +4,7 @@ return {
                 dependencies = {
                         "hrsh7th/cmp-cmdline",
                         "hrsh7th/cmp-buffer",
+                        "amarakon/nvim-cmp-buffer-lines",
                         "hrsh7th/cmp-path",
                         "hrsh7th/cmp-nvim-lsp",
                         "hrsh7th/cmp-nvim-lsp-signature-help",
@@ -52,15 +53,19 @@ return {
                                                 end
                                         end, { "i", "s" }),
                                         ["<C-e>"] = cmp.mapping.abort(),
-                                        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+                                        ["<CR>"] = cmp.mapping.confirm({
+                                                behavior = cmp.ConfirmBehavior.Replace,
+                                                select = true,
+                                        }),
                                 }),
                                 sources = cmp.config.sources({
                                         { name = "path" },
-                                        { name = "luasnip",                keyword_length = 2 },
-                                        { name = "nvim_lsp",               keyword_length = 3 },
-                                        { name = "nvim_lsp_signature_help" },
-                                        { name = "dictionary",             keyword_length = 5 },
-                                        { name = "buffer",                 keyword_length = 5 },
+                                        { name = "nvim_lsp_signature_help", priority = 5 },
+                                        { name = "luasnip",                 keyword_length = 1, priority = 4 },
+                                        { name = "nvim_lsp",                keyword_length = 2, priority = 6 },
+                                        { name = "buffer",                  keyword_length = 2, priority = 2 },
+                                        { name = "buffer-lines",            keyword_length = 2, priority = 1 },
+                                        { name = "dictionary",              keyword_length = 3 },
                                         { name = "nvim_lua" },
                                 }),
                         })

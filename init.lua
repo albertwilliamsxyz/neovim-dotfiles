@@ -62,8 +62,4 @@ vim.keymap.set("n", "<leader>tae", ":Texplore<CR>")
 vim.keymap.set("n", "<leader>tao", ":tabo<CR>")
 vim.keymap.set("n", "<leader>tah", ":tabe %<CR>")
 
--- Language Server Protocol
-
--- vim.lsp.set_log_level("trace")
-
 require("config.lazy")
