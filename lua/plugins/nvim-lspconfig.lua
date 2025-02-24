@@ -66,6 +66,8 @@ return {
 				vim.keymap.set("n", "<leader>lgD", vim.lsp.buf.declaration, options)
 				vim.keymap.set("n", "<leader>lgi", vim.lsp.buf.implementation, options)
 				vim.keymap.set("n", "<leader>lgr", vim.lsp.buf.references, options)
+				vim.keymap.set("n", "<leader>lic", vim.lsp.buf.incoming_calls, options)
+				vim.keymap.set("n", "<leader>loc", vim.lsp.buf.outgoing_calls, options)
 
 				-- Actions
 				vim.keymap.set("n", "<leader>lft", vim.lsp.buf.format, options)
